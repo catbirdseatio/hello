@@ -18,12 +18,12 @@ jobs:
         python-version: 3.11
     
     - name: Add environment variables to .env
-        run: |
-          echo "DEBUG=0" >> .env
-          echo "ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}" >> .env
-          echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env
-          echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
-          echo " S3=False"
+      run: |
+        echo "DEBUG=0" >> .env
+        echo "ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}" >> .env
+        echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env
+        echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
+        echo " S3=False"
 
     - name: Install dependencies
       run: |
