@@ -16,3 +16,4 @@ class TestHello(TestCase):
         response = self.client.post("/", data=data)
         self.assertEqual(response.status_code, 200)
         self.assertContains(response, data["note"])
+        self.assertNotContains(response, "HAHAHHA!!!!")
