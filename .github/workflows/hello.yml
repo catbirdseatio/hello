@@ -64,5 +64,5 @@ jobs:
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
-        script: ls
+        script: ls -a ~/www/hello
     
