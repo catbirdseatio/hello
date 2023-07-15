@@ -25,7 +25,7 @@ jobs:
         # echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
         # echo " S3=False"
         # echo .env 
-        echo secrets.SECRET_KEY
+        echo ${{ secrets.SECRET_KEY }}
     # - name: Install dependencies
     #   run: |
     #     python -m pip install --upgrade pip
