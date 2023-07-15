@@ -20,7 +20,7 @@ jobs:
     
     - name: Add environment variables to .env
       run: |
-        secret_key="${{ inputs.SECRET_KEY }}"
+        secret_key="${{ secrets.SECRET_KEY }}"
         echo "secret_key length: ${#SECRET_KEY}"
     # - name: Install dependencies
     #   run: |
