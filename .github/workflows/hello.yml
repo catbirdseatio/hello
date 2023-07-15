@@ -42,27 +42,4 @@ jobs:
     - name: Run tests
       run: python manage.py test
   deploy:
-    needs: build-and-test
-    runs-on: ubuntu-latest
-    environment: live
-    steps:
-    - name: Checkout repository
-    uses: actions/checkout@v3
-    - name:
-    uses: appleboy/ssh-action@master
-       env:
-        HOST: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
-      with:
-        source: "."
-        target: "/home/leigh/www/hello"
-    - name: Executing remote command
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST }}
-        USERNAME: ${{ secrets.USERNAME }}
-        PORT: ${{ secrets.PORT }}
-        KEY: ${{ secrets.SSHKEY }}
-        script: ls -a
+    
