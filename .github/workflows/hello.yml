@@ -5,9 +5,15 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-    - name: Run Django unit tests
-      run: |
-        pip3 install --user django
-        pip3 install -r requirements.txt
-        python3 manage.py test
+      - name: Checkout code
+        uses: actions/checkout@v2
+        uses: actions/setup-python@v2
+        with:
+           python-version: 3.8
+      - name: Install requirements
+        run: |
+            pip install -r requirements.txt
+      - name: Run tests
+        run: |
+            cd src
+            python manage.py test
