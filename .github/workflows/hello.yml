@@ -60,7 +60,7 @@ jobs:
     - name: Executing remote command
       uses: appleboy/ssh-action@master
       with:
-         host: ${{ secrets.IP }}
+        host: ${{ secrets.IP }}
         username: ${{ secrets.USERNAME }}
         port: ${{ secrets.PORT }}
         key: ${{ secrets.KEY }}
