@@ -24,7 +24,7 @@ jobs:
         echo "DATABASE_URL=${{ secrets.DATABASE_URL }}" >> .env
         echo "SECRET_KEY=${{ secrets.SECRET_KEY }}" >> .env
         echo "ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}" >> .env
-        echo "S3=${{ secrets.S3 }}" >> .env
+        echo "S3=${{ env.S3 }}" >> .env
         cat .env
         
         
