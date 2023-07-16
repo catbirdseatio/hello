@@ -9,7 +9,7 @@ class TestHello(TestCase):
     def test_index_get(self):
         response = self.client.get("/")
         self.assertEqual(response.status_code, 200)
-        self.assertContains(response, "Hello World")
+        self.assertContains(response, "Hello Gorgeous!")
     
     def test_index_post(self):
         data =  {"note": "Lorem Ipsum"}

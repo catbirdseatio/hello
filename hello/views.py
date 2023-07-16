@@ -6,7 +6,7 @@ data = []
 
 class IndexView(View):
     def get(self, request):
-        return HttpResponse("Hello World!")
+        return HttpResponse("Hello Gorgeous!")
     
     def post(self, request):
         note = request.POST.get("note")
