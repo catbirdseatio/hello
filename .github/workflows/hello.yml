@@ -48,7 +48,7 @@ jobs:
     steps:
     - name: Checkout repository
       uses: actions/checkout@v3
-    - name: copy file via ssh key
+    - name: copy files via ssh key
       uses: appleboy/scp-action@v0.1.4
       with:
         host: ${{ secrets.IP }}
